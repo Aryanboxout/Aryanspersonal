@@ -17,3 +17,8 @@ They can be connected to the internet unleashing ultimate possibilty
 How does someone that is empowered help someone that is not empowered? Describe something you could do at Del Norte HS.
 
 Not having acess of technology so starting charity in the community can help empower people to gain acess.
+
+Is paper or red tape blocking digital empowerment? Are there such barriers at Del Norte? Elsewhere?
+
+There are barriers at del norte, students who borrow chromebooks are red tape blocked to acess to
+intellij, this is commen for many people.
