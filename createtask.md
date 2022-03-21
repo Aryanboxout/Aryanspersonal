@@ -1,3 +1,4 @@
+{% include nav.html %}
 Program purpose and Function
 
 The program has a simple purpose. To inform the user of the number they want to be informed about. The user can input any random integer they desire into the UI textbox. It will return on the UI where the number is prime, even, or odd, and will also give a mathematical fact
