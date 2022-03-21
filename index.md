@@ -14,4 +14,3 @@
 [Test Prep Study](https://aryanboxout.github.io/Aryanspersonal/Notes)
 
 
-[Grading ticket week 0](https://github.com/Aryanboxout/Aryanspersonal/projects/1)
