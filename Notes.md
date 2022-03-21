@@ -22,3 +22,8 @@ Is paper or red tape blocking digital empowerment? Are there such barriers at De
 
 There are barriers at del norte, students who borrow chromebooks are red tape blocked to acess to
 intellij, this is commen for many people.
+
+
+5.3 and 5.4 Notes
+
+

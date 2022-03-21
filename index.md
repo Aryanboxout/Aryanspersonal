@@ -1,7 +1,9 @@
 [Create Task](https://aryanboxout.github.io/Aryanspersonal/createtask)
 
 
-[Replit Runtime](https://aryanboxout.github.io/Aryanspersonal/code)
+[Replit Runtime week 0](https://aryanboxout.github.io/Aryanspersonal/code)
+
+[Replit Runtime week 1](https://aryanboxout.github.io/Aryanspersonal/code1)
 
 
 [Test Prep Study](https://aryanboxout.github.io/Aryanspersonal/Notes)
