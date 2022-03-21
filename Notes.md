@@ -27,3 +27,8 @@ intellij, this is commen for many people.
 5.3 and 5.4 Notes
 
 
+Bias is everywhere, computers are created by humans and if they are developed by non diverse groups they
+are in risk of showcasing bias. Bias can be harmful and cause stereotypes. Decentralazation and elimination 
+of a central source can reduce bias, getting the whole circle is important and can help. Also feedback is extremely
+helpful in eliminating bias. Crowdsourcing can help eliminate this bias as you try to gain opinions from a wide
+variety of people, which helps collect the circle.
