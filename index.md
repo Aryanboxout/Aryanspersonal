@@ -3,6 +3,6 @@
 
 Aryan Shah's personal coding portfolio for Data Structure.
 
-[Review ticket week 1] (https://github.com/Aryanboxout/Aryanspersonal/issues/2)
+[Week 1 review ticket](https://github.com/Aryanboxout/Aryanspersonal/issues/2)
 
 
