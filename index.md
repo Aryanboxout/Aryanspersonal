@@ -1,6 +1,8 @@
 {% include nav.html %}
 
 
+[Week 1 Review ticket](https://github.com/Aryanboxout/Aryanspersonal/issues/2)
+
 [Create Task](https://aryanboxout.github.io/Aryanspersonal/createtask)
 
 
