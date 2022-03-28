@@ -35,3 +35,16 @@ are in risk of showcasing bias. Bias can be harmful and cause stereotypes. Decen
 of a central source can reduce bias, getting the whole circle is important and can help. Also feedback is extremely
 helpful in eliminating bias. Crowdsourcing can help eliminate this bias as you try to gain opinions from a wide
 variety of people, which helps collect the circle.
+
+
+
+
+5.5 and 5.6
+Licenses has different terms
+These terms give an agreement
+Can decide if it is free or not
+You have to cite sources for it to be legal
+PII: Personal Identifiable Information
+PII is accessible like an open source and is information available to all
+This can be used for various reasons
+Employers can use as background check
