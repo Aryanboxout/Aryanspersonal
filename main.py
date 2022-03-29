@@ -1,81 +1,123 @@
-"""
-Introduction to Console Programming
-Writing a function to print a menu
-"""
+# menuy.py - function style menu
+# Imports typically listed at top
+# each import enables us to use logic that has been abstracted to other files and folders
+from week0 import swap
+from week0 import ship
+from week0 import pattern
+from week1 import data
+from week1 import fib
+from week2 import factorial
+from week2 import math
+from week2 import palindrom
 
 
-# Menu options in print statement
-def print_menu1():
-    print('1 -- Swap 2 numbers' )
-    print('2 -- merge 2 numbers' )
-    print('3 -- nothing' )
-    print('4 -- Exit' )
-    runOptions()
 
 
-# Menu options as a dictio3nary
-menu_options = {
-    1: 'Swap 2 numbers',
-    2: 'merge numbers',
-    3: 'nothing',
-    4: 'Exit',
-}
+# Main list of [Prompts, Actions]
+# Two styles are supported3
 
-# Print menu options from dictionary key/value pair
-def print_menu2():
-    for key in menu_options.keys():
-        print(key, '--', menu_options[key] )
-    runOptions()
+# 1. file names will be run by exec(open("filename.py").read())
+# 2. function references will be executed directly file.function()
+main_menu = [
+   ["swap", swap.swap]  
+    
+]
 
-# menu option 1
-def stringy():
-    print('You chose \' 1 -  Swap 2 numbers\'')
-    x = input("Enter your first value x: ")
-    y = input("Enter your second value y: ")
+# Submenu list of [Prompt, Action]
+# Works similarly to main_menu
+week0 = [
+    ["swap", swap.swap],
+    ["pattern", pattern.pattern],
+    ["Fun Math", ship.ship]
+]
+week1 = [
+    ["Data", "data.py"],
+    ["Fib", fib.fibprint],
    
-    temp = x
-    x = y
-    y = temp
-    print('The value of x after swapping:     {}'.format(x))
-    print('The value of y after swapping:  {}'.format(y))
-  
+]
+week2 = [
+    ["Factorial", factorial.fact],
+    ["math", math.mathprint],
+    ["palindrom", palindrom.palinprint]
+]
 
-# menu option 2
-def numby():
-    print('You chose \' 2 - Adding\'')
-    a = input("Enter first number: ")
-    b = input("Enter your second number: ")
-    result = a + b
-    print("asnwer:", result)
-  
 
-   # menu option 3
-def listy():
-    print('You chose \'3 - here is a fun pattern\'')
-        
-   
 
-# call functions based on input choice
-def runOptions():
-    # infinite loop to accept/process user menu choice
-    while True:
+# Menu banner is typically defined by menu owner
+border = "" * 25
+banner = f"\n{border}\n Select Option\n{border}"
+
+# def menu
+# using main_menu list:
+# 1. main menu and submenu reference are created [Prompts, Actions]
+# 2. menu_list is sent as parameter to menuy.menu function that has logic for menu control
+def menu():
+    title = "Aryan's menu" + banner
+    menu_list = main_menu.copy()
+    menu_list.append(["week 0",week0()])
+    menu_list.append(["week 1",week1()])
+    menu_list.append(["week 2",week2()])
+    buildMenu(title, menu_list)
+
+# def submenu
+# using sub menu list above:
+# sub_menu works similarly to menu()
+def week0():
+    title = "Week0" + banner
+    buildMenu(title, week0)
+def week1():
+    title = "Week1" + banner
+    buildMenu(title, week1)
+def week2():
+    title = "Week2" + banner
+    buildMenu(title, week2)
+
+
+def buildMenu(banner, options):
+    # header for menu
+    print(banner)
+    # build a dictionary from options
+    prompts = {0: ["Exit", None]}
+    for op in options:
+        index = len(prompts)
+        prompts[index] = op
+
+    # print menu or dictionary
+    for key, value in prompts.items():
+        print(key, '->', value[0])
+
+    # get user choice
+    choice = input("Type your choice> ")
+
+    # validate choice and run
+    # execute selection
+    # convert to number
+    try:
+        choice = int(choice)
+        if choice == 0:
+            # stop
+            return
         try:
-            option = int(input('Enter your choice 1-4: '))
-            if option == 1:
-                stringy()
-            elif option == 2:
-                numby()
-            elif option == 3:
-                listy()
-            # Exit menu    
-            elif option == 4:  
-                print('Exiting! Thank you! Good Bye...')
-                exit() # exit out of the (infinite) while loop
-            else:
-                print('Invalid option. Please enter a number between 1 and 4.')
-        except ValueError:
-            print('Invalid input. Please enter an integer input.')
+            # try as function
+            action = prompts.get(choice)[1]
+            action()
+        except TypeError:
+            try:  # try as playground style
+                exec(open(action).read())
+            except FileNotFoundError:
+                print(f"File not found!: {action}")
+            # end function try
+        # end prompts try
+    except ValueError:
+        # not a number error
+        print(f"Not a number: {choice}")
+    except UnboundLocalError:
+        # traps all other errors
+        print(f"Invalid choice: {choice}")
+    # end validation try
 
-if __name__=='__main__':
-    # print_menu1()
-    print_menu2()
+    buildMenu(banner, options)  # recursion, start menu over again
+
+
+if __name__ == "__main__":
+    menu()
