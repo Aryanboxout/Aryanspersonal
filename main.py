@@ -5,7 +5,7 @@ from week0 import pattern
 from week1 import data
 from week1 import fib
 from week2 import factorial
-import lcm
+from lcm import *
 from week2 import Palindrome
 
 
