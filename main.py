@@ -5,7 +5,7 @@ from week0 import pattern
 from week1 import data
 from week1 import fib
 from week2 import factorial
-from week2 import math
+import lcm
 from week2 import Palindrome
 
 
@@ -33,8 +33,8 @@ week1sub_menu = [
 
 week2sub_menu = [
     ["Factorial", "week2/factorial.py"],
-    ["math", "week2/math.py"],
-    ["Palindrome", "week2/Palindrome.py"]
+    ["Palindrome", "week2/Palindrome.py"],
+    ["Least Commmon Factor", "lcm.py"]
 ]
 
 
