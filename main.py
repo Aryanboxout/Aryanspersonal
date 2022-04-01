@@ -1,6 +1,4 @@
-# menuy.py - function style menu
-# Imports typically listed at top
-# each import enables us to use logic that has been abstracted to other files and folders
+
 from week0 import swap
 from week0 import ship
 from week0 import pattern
@@ -8,7 +6,7 @@ from week1 import data
 from week1 import fib
 from week2 import factorial
 from week2 import math
-from week2 import palindrom
+from week2 import Palindrome
 
 
 
@@ -19,26 +17,26 @@ from week2 import palindrom
 # 1. file names will be run by exec(open("filename.py").read())
 # 2. function references will be executed directly file.function()
 main_menu = [
-   ["swap", swap.swap]  
-    
+   ["swap", "week0/swap.py"]
 ]
 
 # Submenu list of [Prompt, Action]
 # Works similarly to main_menu
-week0 = [
-    ["swap", swap.swap],
-    ["pattern", pattern.pattern],
-    ["Fun Math", ship.ship]
+week0sub_menu = [
+    ["Swap", "week0/swap.py"],
+    ["Pattern", "week0/pattern.py"],
+    ["Fun Math", "week0/ship.py"]
 ]
-week1 = [
-    ["Data", "data.py"],
-    ["Fib", fib.fibprint],
-   
+
+week1sub_menu = [
+    ["Data", "week1/data.py"],
+    ["Fib", "week1/fib.py"]
 ]
-week2 = [
-    ["Factorial", factorial.fact],
-    ["math", math.mathprint],
-    ["palindrom", palindrom.palinprint]
+
+week2sub_menu = [
+    ["Factorial", "week2/factorial.py"],
+    ["math", "week2/math.py"],
+    ["Palindrome", "week2/Palindrome.py"]
 ]
 
 
@@ -47,30 +45,24 @@ week2 = [
 border = "" * 25
 banner = f"\n{border}\n Select Option\n{border}"
 
-# def menu
-# using main_menu list:
-# 1. main menu and submenu reference are created [Prompts, Actions]
-# 2. menu_list is sent as parameter to menuy.menu function that has logic for menu control
+
 def menu():
     title = "Aryan's menu" + banner
     menu_list = main_menu.copy()
-    menu_list.append(["week 0",week0()])
-    menu_list.append(["week 1",week1()])
-    menu_list.append(["week 2",week2()])
+    menu_list.append(["week 0",week0submenu])
+    menu_list.append(["week 1",week1submenu])
+    menu_list.append(["week 2",week2submenu])
     buildMenu(title, menu_list)
 
-# def submenu
-# using sub menu list above:
-# sub_menu works similarly to menu()
-def week0():
+def week0submenu():
     title = "Week0" + banner
-    buildMenu(title, week0)
-def week1():
+    buildMenu(title, week0sub_menu)
+def week1submenu():
     title = "Week1" + banner
-    buildMenu(title, week1)
-def week2():
+    buildMenu(title, week1sub_menu)
+def week2submenu():
     title = "Week2" + banner
-    buildMenu(title, week2)
+    buildMenu(title, week2sub_menu)
 
 
 def buildMenu(banner, options):

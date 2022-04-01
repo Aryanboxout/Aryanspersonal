@@ -1,17 +1,12 @@
-class Test:
+class factorial:
+    def __call__(self, num):
+        final = 1
+        for i in range(1, num + 1):
+            final = final * i
+        return final
 
-    def fact(self, n):
-        f = 1
-        for i in range(1, n + 1):
-            f = f * i
-        return f
-def fact():
-    
- n = int(input("Enter a number:"))
 
- obj = Test()
- f = obj.fact(n)
- print("Factorial is:", f)
-
-if __name__ == "__main__":
-   fact()
+factorial = factorial()
+number = input("Enter a number to find the factorial of: ")
+number = int(number)
+print("The factorial of ", number, "is",   factorial(number))
