@@ -9,8 +9,6 @@ from week2 import math
 from week2 import Palindrome
 
 
-
-
 # Main list of [Prompts, Actions]
 # Two styles are supported3
 
