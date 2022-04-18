@@ -21,4 +21,6 @@ the developed algorithm that includes:
 
 sequencing The data values will be sequenced into an array. This will allow strategic values to be accessed when running the program. They will be placed in a specific order to allow the efficiency selection and the overall function to work.
 selection The if statements will select the correct indexed value within each respective Array. This will be allowed by effective sequencing and iteration that allows the if statement to check multiple times whether the value is met with that of the array.
-iteration For loop will simplify the code and decrease the number of for loops as iteration repeats the process is a short amount of written code. It will allow the elimination of numerous amount of if statements.
+iteration For loop will simplify the code and decrease the number of for loops as iteration repeats the process is a short amount of written
+code. It will allow the elimination of numerous amount of if statements.
+<iframe frameborder="0" width="100%" height="500px" src="https://www.loom.com/share/6616d4c4dcd14e23b031de51c29de081"> </iframe>
